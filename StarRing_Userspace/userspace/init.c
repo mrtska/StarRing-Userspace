@@ -153,7 +153,7 @@ static int free_type_init() {
 
 
 
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
 /*
 
 	context.width = 854;
@@ -163,18 +163,13 @@ int main(int argc, char **argv) {
 	context.size = context.width * context.height * context.depth;
 */
 
-
-	puts("data");
 	exit(0);
-	FILE *fp = fopen("/font/ipaexm.ttf", "rb");
+
+	puts("User Space");
+	FILE *fp = fopen("/font/ipaexg.ttf", "rb");
 
 	fseek(fp, 0, SEEK_END);
-	printf("rand %X\n", rand());
-	printf("rand %X\n", rand());
-	printf("rand %X\n", rand());
-	printf("rand %X\n", rand());
-	printf("rand %X\n", rand());
-	printf("rand %X\n", rand());
+	printf("file size %u\n", ftell(fp));
 
 
 	fclose(fp);
